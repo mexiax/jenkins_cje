@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent none
   stages {
     stage('Buzz Buzz') {
       parallel {
@@ -16,6 +16,12 @@ pipeline {
         }
 
         stage('List dir') {
+          agent {
+            node {
+              label 'JAVA_NODE'
+            }
+
+          }
           steps {
             sh 'ls -al'
           }
