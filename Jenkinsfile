@@ -4,24 +4,14 @@ pipeline {
     stage('Buzz Buzz') {
       parallel {
         stage('Buzz Buzz') {
-          agent {
-            node {
-              label 'JAVA_NODE'
-            }
-
-          }
+          agent any
           steps {
             echo 'Bees Buzz!'
           }
         }
 
         stage('List dir') {
-          agent {
-            node {
-              label 'JAVA_NODE'
-            }
-
-          }
+          agent any
           steps {
             sh 'ls -al'
           }
