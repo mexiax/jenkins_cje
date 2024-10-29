@@ -1,38 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Buzz') {
-      parallel {
-        stage('Buzz Buzz') {
-          steps {
-            echo 'Bees Buzz!'
-          }
-        }
-
-        stage('List directory') {
-          steps {
-            sh 'ls -al'
-          }
-        }
-
+    stage(' Fluffy Build') {
+      steps {
+        echo ' Fluffy Build!'
       }
     }
 
-    stage('Bees') {
-      parallel {
-        stage('Bees Bees') {
-          steps {
-            echo 'Buzz, Bees, Buzz!'
-          }
-        }
+    stage('Fluffy Test') {
+      steps {
+        echo 'Fluffy Test!'
+      }
+    }
 
-        stage('Bees Buzzing') {
-          steps {
-            echo 'Bees Buzzing!'
-            sh 'cat Jenkinsfile'
-          }
-        }
-
+    stage('Fluffy Deploy') {
+      steps {
+        echo 'Fluffy Deploy!'
       }
     }
 
