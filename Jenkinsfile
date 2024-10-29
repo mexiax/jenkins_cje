@@ -1,20 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage(' Fluffy Build') {
-      parallel {
-        stage(' Fluffy Build') {
-          steps {
-            echo 'Fluffy Build!'
-          }
-        }
-
-        stage('error') {
-          steps {
-            sh 'echo Another Placeholder'
-          }
-        }
-
+    stage('Fluffy Build') {
+      steps {
+        echo 'Placeholder'
+        sh 'echo Edited Placeholder'
       }
     }
 
@@ -27,7 +17,7 @@ pipeline {
 
     stage('Fluffy Deploy') {
       steps {
-        echo 'Fluffy Deploy!'
+        echo 'Placeholder!'
       }
     }
 
