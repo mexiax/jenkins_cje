@@ -1,19 +1,35 @@
 pipeline {
-  agent none
+  agent any
   stages {
-    stage('Buzz Buzz') {
+    stage('Buzz') {
       parallel {
         stage('Buzz Buzz') {
-          agent any
           steps {
             echo 'Bees Buzz!'
           }
         }
 
-        stage('List dir') {
-          agent any
+        stage('List directory') {
           steps {
             sh 'ls -al'
+          }
+        }
+
+      }
+    }
+
+    stage('Bees') {
+      parallel {
+        stage('Bees Bees') {
+          steps {
+            echo 'Buzz, Bees, Buzz!'
+          }
+        }
+
+        stage('Bees Buzzing') {
+          steps {
+            echo 'Bees Buzzing!'
+            sh 'cat Jenkinsfile'
           }
         }
 
