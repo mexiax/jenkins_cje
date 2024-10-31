@@ -5,6 +5,8 @@ pipeline {
   stages {
     stage('Buzz Build') {
       steps {
+        sh '''java --version
+javac --version'''
         sh 'chmod +x ./jenkins/*.sh'
         sh './jenkins/build.sh'
         sh './jenkins/crear_jar.sh'
