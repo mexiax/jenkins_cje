@@ -1,5 +1,7 @@
 pipeline {
-  agent any
+  agent {
+    label 'JAVA_NODE'
+  }
   stages {
     stage('Buzz Build') {
       steps {
