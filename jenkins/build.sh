@@ -1,4 +1,4 @@
 echo "Start Buzz Build"
 pwd
-ls -la
+ls -la jenkins/
 echo "End Buzz Build"
