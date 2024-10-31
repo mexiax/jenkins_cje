@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Buzz Build') {
       steps {
-        echo 'Buzz Build'
+        sh 'pwd'
+        sh 'ls -la'
       }
     }
 
