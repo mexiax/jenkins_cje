@@ -4,7 +4,7 @@ pipeline {
     stage('Buzz Build') {
       steps {
         echo 'Comenzamos'
-        sh 'touch prueba.sh'
+        sh 'echo "Hola Buzz"'
         sh 'chmod +x ./jenkins/*.sh'
         sh './jenkins/build.sh'
         sh './jenkins/crear_jar.sh'
